@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 df = pd.read_csv("data/processed/driver_summary_2025.csv")
 
 
@@ -12,7 +13,6 @@ corr_matrix = numeric_df.corr()
 
 print(corr_matrix)
 
-# Plot heatmap
 plt.figure(figsize=(10, 8))
 plt.imshow(corr_matrix, aspect='auto')
 plt.colorbar()
