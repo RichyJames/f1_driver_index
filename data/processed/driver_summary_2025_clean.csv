@@ -1,0 +1,22 @@
+driver,constructor,races_entered,total_points,points_per_race,average_finish_position,average_grid_position,average_positions_gained,wins,podiums,top10_finishes,dnfs,finish_position_std,dnf_rate,top10_rate,podium_rate,win_rate,average_qualifying_position
+Lando Norris,McLaren,24,394,16.42,4.25,2.96,-1.29,7,18,21,3,5.6,0.12,0.88,0.75,0.29,2.96
+Max Verstappen,Red Bull,24,389,16.21,3.67,3.58,-0.08,8,15,23,1,3.92,0.04,0.96,0.62,0.33,3.5
+Oscar Piastri,McLaren,24,381,15.88,4.21,3.0,-1.21,7,16,22,2,5.22,0.08,0.92,0.67,0.29,3.04
+George Russell,Mercedes,24,289,12.04,4.54,4.38,-0.17,2,9,23,1,2.5,0.04,0.96,0.38,0.08,4.38
+Charles Leclerc,Ferrari,24,225,9.38,6.75,5.42,-1.33,0,7,20,3,5.33,0.12,0.83,0.29,0.0,5.46
+Lewis Hamilton,Ferrari,24,135,5.62,8.5,9.38,0.88,0,0,19,4,4.63,0.17,0.79,0.0,0.0,9.04
+Andrea Kimi Antonelli,Mercedes,24,135,5.62,9.83,8.75,-1.08,0,3,14,6,5.89,0.25,0.58,0.12,0.0,8.58
+Alexander Albon,Williams,24,70,2.92,11.04,12.75,1.71,0,0,11,8,4.63,0.33,0.46,0.0,0.0,12.92
+Carlos Sainz,Williams,24,54,2.25,12.17,11.17,-1.0,0,2,10,9,4.92,0.38,0.42,0.08,0.0,11.0
+Fernando Alonso,Aston Martin,24,51,2.12,11.88,10.21,-1.67,0,0,10,7,4.5,0.29,0.42,0.0,0.0,10.38
+Nico Hülkenberg,Sauber,24,51,2.12,12.79,14.71,1.92,0,1,9,11,5.12,0.46,0.38,0.04,0.0,14.88
+Isack Hadjar,RB F1 Team,24,50,2.08,11.79,9.79,-2.0,0,1,10,11,4.58,0.46,0.42,0.04,0.0,9.67
+Oliver Bearman,Haas F1 Team,24,39,1.62,11.79,14.21,2.42,0,0,9,6,4.18,0.25,0.38,0.0,0.0,13.79
+Liam Lawson,RB F1 Team,24,38,1.58,12.79,12.33,-0.46,0,0,7,9,4.41,0.38,0.29,0.0,0.0,12.54
+Esteban Ocon,Haas F1 Team,24,34,1.42,12.5,15.0,2.5,0,0,9,8,3.95,0.33,0.38,0.0,0.0,15.12
+Lance Stroll,Aston Martin,23,29,1.26,13.7,15.65,1.96,0,0,6,11,4.12,0.48,0.26,0.0,0.0,15.96
+Yuki Tsunoda,Red Bull,24,21,0.88,12.58,12.75,0.17,0,0,7,8,3.34,0.33,0.29,0.0,0.0,12.58
+Pierre Gasly,Alpine F1 Team,24,20,0.83,14.58,13.38,-1.21,0,0,5,13,4.32,0.54,0.21,0.0,0.0,13.42
+Gabriel Bortoleto,Sauber,24,19,0.79,14.25,14.21,-0.04,0,0,5,12,4.06,0.5,0.21,0.0,0.0,13.96
+Jack Doohan,Alpine F1 Team,6,0,0.0,16.33,15.5,-0.83,0,0,0,3,2.8,0.5,0.0,0.0,0.0,15.5
+Franco Colapinto,Alpine F1 Team,18,0,0.0,16.06,16.44,0.39,0,0,0,13,2.51,0.72,0.0,0.0,0.0,16.94

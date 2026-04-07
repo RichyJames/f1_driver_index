@@ -2,9 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
+from pathlib import Path
 
+OUTPUT_DIR = Path("outputs")
+OUTPUT_DIR.mkdir(exist_ok=True)
 
-df = pd.read_csv("data/processed/driver_summary_2025.csv")
+df = pd.read_csv("data/processed/driver_summary_2025_clean.csv")
 
 
 drivers = df["driver"]
@@ -28,11 +31,13 @@ for k in k_values:
     kmeans.fit(scaled_data)
     inertia.append(kmeans.inertia_)
 
+
 plt.figure()
-plt.plot(k_values, inertia, marker='o')
+plt.plot(k_values, inertia, marker="o")
 plt.xlabel("Number of Clusters")
 plt.ylabel("Inertia")
 plt.title("Elbow Method")
+plt.savefig(OUTPUT_DIR / "elbow_plot.png")
 plt.show()
 
 k = 3
@@ -41,6 +46,8 @@ kmeans = KMeans(n_clusters=k, random_state=42)
 clusters = kmeans.fit_predict(scaled_data)
 
 df["cluster"] = clusters
+
+df[["driver", "cluster"]].to_csv(OUTPUT_DIR / "driver_clusters.csv", index=False)
 
 print(df[["driver", "cluster"]].sort_values("cluster"))
 
@@ -53,4 +60,6 @@ for i, name in enumerate(drivers):
 plt.xlabel("Points per Race")
 plt.ylabel("Average Finish Position")
 plt.title("Driver Clusters")
+
+plt.savefig(OUTPUT_DIR / "cluster_plot.png")  # SAVE
 plt.show()

@@ -6,7 +6,7 @@ from sklearn.decomposition import PCA
 
 os.makedirs("outputs", exist_ok=True)
 
-df = pd.read_csv("data/processed/driver_summary_2025.csv")
+df = pd.read_csv("data/processed/driver_summary_2025_clean.csv")
 
 driver_names = df["driver"]
 
