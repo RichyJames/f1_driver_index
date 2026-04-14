@@ -1,8 +1,7 @@
-# src/data_collection/get_multi_season_data.py
-
 from __future__ import annotations
 
 import json
+import time
 from pathlib import Path
 from typing import Any
 
@@ -16,9 +15,23 @@ OUTPUT_DIR = Path("data/raw/multi_season")
 
 def fetch_json(endpoint: str) -> dict[str, Any]:
     url = f"{BASE_URL}/{endpoint}"
-    response = requests.get(url, timeout=30)
-    response.raise_for_status()
-    return response.json()
+
+    max_retries = 5
+    wait_seconds = 2
+
+    for attempt in range(max_retries):
+        response = requests.get(url, timeout=30)
+
+        if response.status_code == 429:
+            print(f"Rate limited on {endpoint}... waiting {wait_seconds}s")
+            time.sleep(wait_seconds)
+            wait_seconds *= 2
+            continue
+
+        response.raise_for_status()
+        return response.json()
+
+    raise Exception(f"Failed after {max_retries} retries: {url}")
 
 
 def save_json(data: dict[str, Any], filename: str) -> None:
@@ -42,6 +55,8 @@ def fetch_all_rounds(season: int, endpoint_name: str) -> list[dict[str, Any]]:
         data = fetch_json(f"{season}/{rnd}/{endpoint_name}.json")
         races = data["MRData"]["RaceTable"]["Races"]
         all_races.extend(races)
+
+        time.sleep(1)  
 
     return all_races
 
